@@ -1,18 +1,17 @@
 
-public class Laptop extends Home {
+public class Laptop {
 
-    
+
         protected String NameLabtop ;
         protected String DetailsLab;
-        private double priceLabtop;
-        private double price;
-        public Laptop(String LabtopName, String LabtopDeyails) {
+        protected int price;
+        /*public Laptop(String LabtopName, String LabtopDeyails) {
         }
         public Laptop(String Name, String Details, int Price) {
-        }
-        public  void Labtop(String _Name, String Details , double price, int priceLabtop)
+        }*/
+        public Laptop(){}
+        public Laptop(String _Name, String Details , int priceLabtop)
         {
-            
             NameLabtop =  _Name ;
             DetailsLab = Details;
             price = priceLabtop ;
@@ -25,24 +24,24 @@ public class Laptop extends Home {
         {
             System.out.println("Details : "+DetailsLab);
         }
-    
+
         public void PrintLaptopName(int i)
         {
             System.out.println((i+1)+" - Laptop Name : "+NameLabtop);
         }
-        public int getPrice(int priceLabtop) {
-            
-            return priceLabtop ;
+        public void getPrice() {
+
+            System.out.println("Price : "+price);
 
         }
 
-        public void setPrice(double price) {
+        public void setPrice(int price) {
 
-            this.price = priceLabtop;
+            this.price = price;
         }
-    
+
         public String toString() {
-            
+
             return "Name: " + NameLabtop + ", Details: " + DetailsLab + ", Price: " + price + " SAR";
         }
 }
