@@ -1,48 +1,42 @@
-package Main;
-
 
 public class Product {
 
     protected String name;
 
-    protected String company;
+    protected String detail;
 
     protected double price;
 
-    public Product(String name, String company, double price) {
+    public Product(String name, String detail, double price) {
         this.name = name;
-        
-        this.company = company;
-        
+
+        this.detail = detail;
+
         this.price = price;
     }
 
-    public String getName() {
-        return name;
+    public void getName(int i) {
+     	System.out.println((i+1)+" - Product Name : "+name);
+    }
+	public void getProductName() {
+     	System.out.println("Product Name : "+name);
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getCompany() {
-        return company;
+    public void getDetails() {
+        System.out.println("Product Details : "+ detail);
     }
 
-    public void setCompany(String company) {
-        this.company = company;
+    public void getPrice() {
+        System.out.println("Product Price : "+price + " SAR ");
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
     @Override
     public String toString() {
-        return "Name: " + name + ", Company: " + company + ", Price: " + price + " SAR";
+        return "Name: " + name + ", Details: " + detail + ", Price: " + price + " SAR";
     }
 }
