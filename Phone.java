@@ -1,45 +1,31 @@
 
-//class for Phones
-class Phone extends Home
+class Phone
 {
-    
-	private static final String Details = null;
 	protected String Name;
     protected String DetailsPhone;
-	protected int PricePhone ; 
-    /**
-     * @param _Name
-     * @param _Details 
-     * @param DetailsPhone
-     */
-    public Phone(String _Name, String Details , int Price, String _Details)
+    protected int price;
+    public Phone(String _Name, String _DetailsPhone,int _Price)
 	{
 		Name = _Name;
-		Details = _Details;
-		int price = Price ; 
+		DetailsPhone = _DetailsPhone;
+		price = _Price;
 	}
-    public Phone(String Name, String details, int price) {
-	}
-	public String getName()
+    public String getName()
 	{
 		return Name;
 	}
 	public void getDetails()
 	{
-		System.out.println("Details : "+ Details);
+		System.out.println("Details : "+ DetailsPhone);
 	}
 
 	public void PrintPhoneName(int i)
 	{
 		System.out.println((i+1)+" - Phone Name : "+Name);
 	}
-    
-	public double getPrice(int Price) {
-		return Price;
-	}
-	
-	public void PrintPricePhone(Double PricePhone)
+    public void PrintPhonePrice()
 	{
-		System.out.println( " Price : " + PricePhone);
+		System.out.println("Phone Price : "+price);
 	}
 }
+                       
